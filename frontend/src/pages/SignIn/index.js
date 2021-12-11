@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // import { Container } from './styles';
 
@@ -53,9 +54,12 @@ function SignIn() {
           <p>
             Não possui uma conta?
             <br />
-            <a className="register-link ml-1" href="/cadastro">
-              cadastre-se aqui.
-            </a>
+            <Link to="/sign-up">cadastre-se aqui.</Link>
+          </p>
+          <p>
+            Para teste
+            <br />
+            <Link to="/">Ir para a Home</Link>
           </p>
         </div>
       </div>
