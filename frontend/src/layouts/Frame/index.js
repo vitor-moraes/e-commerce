@@ -1,9 +1,12 @@
 import React from "react";
+import "./styles.css";
 
-// import { Container } from './styles';
-
-function Frame() {
-  return <div />;
+function Frame(props) {
+  return (
+    <div className="container">
+      <div className="frame">{props.children}</div>
+    </div>
+  );
 }
 
 export default Frame;
