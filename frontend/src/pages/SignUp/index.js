@@ -18,7 +18,6 @@ function SignUp() {
   return (
     <Frame>
       <div>
-        <Link to="/sign-in">Fazer login.</Link>
         <form onSubmit={handleSubmit} encType="multipart/form-data">
           <div className="form-group">
             <div>
@@ -75,6 +74,8 @@ function SignUp() {
               <button className="basic-btn" type="submit">
                 Cadastre-se!
               </button>
+              <br />
+              <Link to="/sign-in">Voltar</Link>
             </div>
           </div>
         </form>

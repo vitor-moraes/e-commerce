@@ -1,9 +1,14 @@
 import React from "react";
+import "./styles.css";
 
-// import { Container } from './styles';
-
-function Standard() {
-  return <div />;
+function Standard(props) {
+  return (
+    <div className="container-standard">
+      <div className="header"></div>
+      <div className="body">{props.children}</div>
+      <div className="footer"></div>
+    </div>
+  );
 }
 
 export default Standard;
