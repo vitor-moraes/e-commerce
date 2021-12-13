@@ -1,9 +1,8 @@
 import React from "react";
-
-// import { Container } from './styles';
+import "./styles.css";
 
 function Home() {
-  return <div />;
+  return <p>Home</p>;
 }
 
 export default Home;
