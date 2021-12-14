@@ -30,5 +30,15 @@ Route.group(() => {
   Route.get("listAll", "CategoriaController.listAll");
  }).prefix("api/categoria");
 
+ Route.group(() => {
+  Route.post("register", "FormaPagamentoController.register");
+  Route.get("listAll", "FormaPagamentoController.listAll");
+ }).prefix("api/formaPag");
+
+ Route.group(() => {
+  Route.post("register", "StatusPedidoController.register");
+  Route.get("listAll", "StatusPedidoController.listAll");
+ }).prefix("api/status");
+
 
  //Route.post('/cidade/register', "CidadeController.register")
