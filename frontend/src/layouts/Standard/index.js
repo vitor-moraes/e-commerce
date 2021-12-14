@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Home from "../../pages/Home";
 import AdminArea from "../../pages/AdminArea";
 import Products from "../../pages/Products";
-import UserConfig from "../../pages/UserConfig";
+import ShoppingCart from "../../pages/ShoppingCart";
 import "./styles.css";
 
 function Standard() {
@@ -11,7 +11,7 @@ function Standard() {
   const pages = [
     { name: "Home", component: <Home /> },
     { name: "Produtos", component: <Products /> },
-    { name: "Configurações", component: <UserConfig /> },
+    { name: "Carrinho de compras", component: <ShoppingCart /> },
     { name: "Área do administrador", component: <AdminArea /> },
   ];
 
@@ -42,7 +42,6 @@ function Standard() {
         </div>
       </div>
       <div className="body">{actualPage}</div>
-      <div className="footer"></div>
     </div>
   );
 }
