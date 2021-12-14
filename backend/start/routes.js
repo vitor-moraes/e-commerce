@@ -20,9 +20,10 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 
-// Route.group(() => {
-//   Route.post("register", "CidadeController.register");
-//  }).prefix("cidade");
+Route.group(() => {
+  Route.post("register", "CidadeController.register");
+  Route.get("listAll", "CidadeController.listAll");
+ }).prefix("api/cidade");
 
 
- Route.post('/cidade/register', "CidadeController.register")
+ //Route.post('/cidade/register', "CidadeController.register")
