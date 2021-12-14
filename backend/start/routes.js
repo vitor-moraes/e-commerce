@@ -25,5 +25,10 @@ Route.group(() => {
   Route.get("listAll", "CidadeController.listAll");
  }).prefix("api/cidade");
 
+ Route.group(() => {
+  Route.post("register", "CategoriaController.register");
+  Route.get("listAll", "CategoriaController.listAll");
+ }).prefix("api/categoria");
+
 
  //Route.post('/cidade/register', "CidadeController.register")
