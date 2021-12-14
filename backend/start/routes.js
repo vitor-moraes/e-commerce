@@ -52,4 +52,10 @@ Route.group(() => {
   Route.get("listOne/:id", "ProdutoController.listOne");
  }).prefix("api/produto");
 
+ Route.group(() => {
+  Route.post("register", "PedidoController.register");
+  Route.get("listAll", "PedidoController.listAll");
+  Route.get("listOne/:id", "PedidoController.listOne");
+ }).prefix("api/pedido");
+
  //Route.post('/cidade/register', "CidadeController.register")
