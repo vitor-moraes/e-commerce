@@ -1,5 +1,7 @@
 'use strict'
 
+const { route } = require('@adonisjs/framework/src/Route/Manager');
+
 /*
 |--------------------------------------------------------------------------
 | Routes
@@ -17,3 +19,10 @@
 const Route = use('Route')
 
 Route.on('/').render('welcome')
+
+// Route.group(() => {
+//   Route.post("register", "CidadeController.register");
+//  }).prefix("cidade");
+
+
+ Route.post('/cidade/register', "CidadeController.register")
