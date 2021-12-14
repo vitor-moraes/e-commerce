@@ -46,5 +46,10 @@ Route.group(() => {
   Route.get("listOne/:id", "CadastroController.listOne");
  }).prefix("api/cadastro");
 
+ Route.group(() => {
+  Route.post("register", "ProdutoController.register");
+  Route.get("listAll", "ProdutoController.listAll");
+  Route.get("listOne/:id", "ProdutoController.listOne");
+ }).prefix("api/produto");
 
  //Route.post('/cidade/register', "CidadeController.register")
