@@ -22,6 +22,7 @@ function Standard() {
           {pages.map((page) => {
             return (
               <button
+                className="standard-header-button"
                 onClick={() => {
                   setActualPage(page.component);
                 }}
