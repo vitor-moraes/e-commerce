@@ -6,8 +6,20 @@ function SignIn() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     window.location.href = "/";
+    //  e.preventDefault();
+    //  try {
+    //    const response = await api.post("/users/login", { email, password });
+    //    console.log(response);
+    //    login(response.data.token);
+    //    const dataUser = await api.get("users/getByEmail/" + email);
+    //    localStorage.setItem("acesso", dataUser.data.access);
+    //    localStorage.setItem("id", dataUser.data.id);
+    //    window.location.href = "/home";
+    //  } catch (error) {
+    //    console.log(error);
+    //  }
   };
 
   return (
