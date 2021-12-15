@@ -27,11 +27,11 @@ class PedidoController {
     }
 
     async listAll({ response }) {
-      const produtos = await Pedidos.all();
+      const pedidos = await Pedidos.all();
 
       let res = []
 
-      for(let item of produtos.rows) {
+      for(let item of pedidos.rows) {
         const object = item["$attributes"]
 
         const formaPag = await FormaPagamento.find(object.id_forma_pag);
