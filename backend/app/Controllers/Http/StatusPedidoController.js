@@ -17,6 +17,15 @@ class StatusPedidoController {
 
     return response.status(200).send(res)
   }
+
+  async listOne({ response, params }) {
+    const status = await StatusPedido.find(params.id);
+
+     if(!status) return response.status(400).send({msg: "Cidade não encontrada"})
+
+
+    return response.status(200).send(status)
+  }
 }
 
 module.exports = StatusPedidoController

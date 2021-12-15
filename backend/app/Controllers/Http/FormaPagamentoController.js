@@ -17,6 +17,15 @@ class FormaPagamentoController {
 
     return response.status(200).send(res)
   }
+
+  async listOne({ response, params }) {
+    const formaPag = await FormaPagamento.find(params.id);
+
+     if(!formaPag) return response.status(400).send({msg: "Cidade não encontrada"})
+
+
+    return response.status(200).send(formaPag)
+  }
 }
 
 module.exports = FormaPagamentoController

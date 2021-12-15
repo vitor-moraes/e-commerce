@@ -16,6 +16,15 @@ class CidadeController {
 
     return response.status(200).send(res)
   }
+
+  async listOne({ response, params }) {
+    const cidade = await Cidade.find(params.id);
+
+     if(!cidade) return response.status(400).send({msg: "Cidade não encontrada"})
+
+
+    return response.status(200).send(cidade)
+  }
 }
 
 module.exports = CidadeController

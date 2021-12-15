@@ -23,21 +23,25 @@ Route.on('/').render('welcome')
 Route.group(() => {
   Route.post("register", "CidadeController.register");
   Route.get("listAll", "CidadeController.listAll");
+  Route.get("listOne/:id", "CidadeController.listOne");
  }).prefix("api/cidade");
 
  Route.group(() => {
   Route.post("register", "CategoriaController.register");
   Route.get("listAll", "CategoriaController.listAll");
+  Route.get("listOne/:id", "CategoriaController.listOne");
  }).prefix("api/categoria");
 
  Route.group(() => {
   Route.post("register", "FormaPagamentoController.register");
   Route.get("listAll", "FormaPagamentoController.listAll");
+  Route.get("listOne/:id", "FormaPagamentoController.listOne");
  }).prefix("api/formaPag");
 
  Route.group(() => {
   Route.post("register", "StatusPedidoController.register");
   Route.get("listAll", "StatusPedidoController.listAll");
+  Route.get("listOne/:id", "StatusPedidoController.listOne");
  }).prefix("api/status");
 
  Route.group(() => {

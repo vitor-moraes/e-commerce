@@ -17,6 +17,15 @@ class CategoriaController {
 
     return response.status(200).send(res)
   }
+
+  async listOne({ response, params }) {
+    const categoria = await Categorias.find(params.id);
+
+     if(!categoria) return response.status(400).send({msg: "Categoria não encontrada"})
+
+
+    return response.status(200).send(categoria)
+  }
 }
 
 module.exports = CategoriaController
